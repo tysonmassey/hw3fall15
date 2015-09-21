@@ -18,6 +18,7 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require 'rspec/its'
+require 'rspec/collection_matchers'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
@@ -32,7 +33,7 @@ RSpec.configure do |config|
     # ...rather than:
     #     # => "be bigger than 2"
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
-    expectations.syntax = :should
+    expectations.syntax = [:should, :expect]
   end
 
   # rspec-mocks config goes here. You can use an alternate test double

@@ -71,7 +71,7 @@ describe OracleOfBacon do
   describe 'constructing URI', :pending => true do
     subject do
       oob = OracleOfBacon.new('fake_key')
-      oob.from = '3%2 "a' ; oob.to = 'George Clooney'
+      oob.to = '3%2 "a' ; oob.from = 'George Clooney'
       oob.make_uri_from_arguments
       oob.uri
     end
